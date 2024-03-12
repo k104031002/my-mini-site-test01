@@ -76,12 +76,12 @@ app.get("/netflix", (req, res) => {
 });
 
 app.get("/download", (req, res) => {
-    res.download(resolve(import.meta.dirname, "singers.json", ""));
+    res.download(path.resolve(__dirname, "singers.json", ""));
 })
 
 
 app.get("/content", (req, res) => {
-    res.sendFile(resolve("test.html"));
+    res.sendFile(path.resolve("test.html"));
 
 });
 
